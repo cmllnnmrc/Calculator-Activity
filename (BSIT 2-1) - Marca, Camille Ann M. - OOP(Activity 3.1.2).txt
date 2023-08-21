@@ -1,0 +1,64 @@
+package activity;
+
+import javax.swing.JOptionPane;
+
+public class calculate {
+
+	int num1;
+	int num2;
+	String operator;
+	
+	calculate (int n1, int n2, String o)
+	{
+		num1 = n1;
+		num2 = n2;
+		operator = o;
+	}
+	
+	 void compute ()
+	{
+		 double total = 0;
+			
+	        if (operator.equals("+"))
+	        {  
+	        	total = add(num1,num2);
+	            JOptionPane.showMessageDialog(null, num1 + " " + operator + " " + num2 + " = " + total,  "ANSWER:", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else if (operator.equals("-"))
+	        {
+	        	total = subs(num1,num2);
+	        	JOptionPane.showMessageDialog(null, num1 + " " + operator + " " + num2 + " = " + total, "ANSWER:", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else if (operator.equals("*"))
+	        {
+	        	total = mul(num1,num2);
+	        	JOptionPane.showMessageDialog(null, num1 + " " + operator + " " + num2 + " = " + total, "ANSWER:", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else if (operator.equals("/"))
+	        {
+	        	total = div(num1,num2);
+	            JOptionPane.showMessageDialog(null, num1 + " " + operator + " " + num2 + " = " + total, "ANSWER:", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else
+	        {
+	        	JOptionPane.showMessageDialog(null, "Invalid Operator" , "|ERROR|", JOptionPane.ERROR_MESSAGE);
+	        }
+	}
+	 
+	 double add (double number1, double number2)
+		 {
+			 return (number1+number2);
+		 }
+	 double subs (double number1, double number2)
+		 {
+			 return (number1-number2);
+		 }
+	 double mul (double number1, double number2)
+		 {
+			 return (number1*number2);
+		 }
+	 double div (double number1, double number2)
+		 {
+			 return (number1/number2);
+		 }
+}
