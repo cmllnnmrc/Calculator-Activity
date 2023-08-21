@@ -1,0 +1,21 @@
+package activity;
+
+import javax.swing.JOptionPane;
+
+public class calculator {
+	
+	public static void main(String[] args)
+	{
+		int no1, no2;
+		String op;
+		
+		no1 = Integer.parseInt(JOptionPane.showInputDialog("Enter 1st Number: "));
+		no2 = Integer.parseInt(JOptionPane.showInputDialog("Enter 2nd Number: "));
+		op = JOptionPane.showInputDialog("Enter Operator (+ | - | * | /): ");
+		
+		calculate ans = new calculate (no1, no2, op);
+		
+		ans.compute();
+	}
+	
+}
